@@ -20,25 +20,25 @@ $initials = substr($initials, 0, 2);
     </div>
     <nav class="sidebar-nav">
         <div class="nav-label">Navigation</div>
-        <a href="dashboard.php" class="nav-item <?= $current === 'dashboard.php' ? 'active' : '' ?>">
+        <a href="dashboard.php" class="nav-item <?= $current === 'dashboard.php' ? 'active' : '' ?>" style="font-size: 18px;>
             <span class="nav-icon">⊞</span><span>Dashboard</span>
         </a>
-        <a href="attendance.php" class="nav-item <?= $current === 'attendance.php' ? 'active' : '' ?>">
+        <a href="attendance.php" class="nav-item <?= $current === 'attendance.php' ? 'active' : '' ?>" style="font-size: 18px;>
             <span class="nav-icon">📅</span><span>Attendance</span>
         </a>
-        <a href="leave.php" class="nav-item <?= $current === 'leave.php' ? 'active' : '' ?>">
+        <a href="leave.php" class="nav-item <?= $current === 'leave.php' ? 'active' : '' ?>" style="font-size: 18px;>
             <span class="nav-icon">📋</span><span>Leave</span>
         </a>
-        <a href="payslips.php" class="nav-item <?= $current === 'payslips.php' ? 'active' : '' ?>">
+        <a href="payslips.php" class="nav-item <?= $current === 'payslips.php' ? 'active' : '' ?>" style="font-size: 18px;>
             <span class="nav-icon">💰</span><span>Payslips</span>
         </a>
-        <a href="settings.php" class="nav-item <?= $current === 'settings.php' ? 'active' : '' ?>">
+        <a href="settings.php" class="nav-item <?= $current === 'settings.php' ? 'active' : '' ?>" style="font-size: 18px;>
             <span class="nav-icon">⚙️</span><span>Settings</span>
         </a>
     </nav>
     <div class="sidebar-footer">
-        <a href="../logout.php" class="logout-btn">
-            <span>⎋</span><span>Log out</span>
+        <a href="../logout.php" class="logout-btn" style="font-size: 18px;">
+            <span>⎋</span><span >Log out</span>
         </a>
     </div>
 </div>

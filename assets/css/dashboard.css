@@ -127,7 +127,7 @@ html, body {
 }
 
 .nav-label {
-    font-size: 10px;
+    font-size: 20px;
     font-weight: 600;
     color: rgba(136,146,184,0.6);
     letter-spacing: 1.2px;
@@ -161,13 +161,17 @@ html, body {
     font-weight: 500;
 }
 
-.nav-item .nav-icon { font-size: 16px; width: 20px; text-align: center; }
+.nav-item .nav-icon { 
+    font-size: 16px; width: 20px; 
+    text-align: center; 
+}
 
 .sidebar-footer {
     padding: 16px 12px;
     border-top: 1px solid rgba(255,255,255,0.06);
     position: relative;
     z-index: 1;
+    font-size: 20px;
 }
 
 .logout-btn {
@@ -178,7 +182,7 @@ html, body {
     border-radius: 10px;
     text-decoration: none;
     color: rgba(255,255,255,0.4);
-    font-size: 13px;
+    font-size: 20px;
     transition: all 0.2s;
     width: 100%;
     border: none;
