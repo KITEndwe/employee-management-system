@@ -266,7 +266,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <label>Password</label>
           <div class="pw-wrap">
             <input type="password" name="password" id="pwField"
-                   placeholder="••••••••" required autocomplete="current-password">
+                   placeholder="•••••••••••" required autocomplete="current-password">
             <button type="button" class="pw-toggle" onclick="togglePw()" aria-label="Show password">
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
