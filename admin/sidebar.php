@@ -38,12 +38,12 @@ $initials = substr($initials, 0, 2);
         <a href="payroll.php" class="nav-item <?= $current === 'payroll.php' ? 'active' : '' ?>">
             <span class="nav-icon">💰</span><span>Payslips</span>
         </a>
-        <a href="settings.php" class="nav-item <?= $current === 'settings.php' ? 'active' : '' ?>">
+        <a href="settings.php" class="nav-item <?= $current === 'settings.php' ? 'active' : '' ?>" >
             <span class="nav-icon">⚙️</span><span>Settings</span>
         </a>
     </nav>
     <div class="sidebar-footer">
-        <a href="../logout.php" class="logout-btn">
+        <a href="../logout.php" class="logout-btn" style="font-size: 15px;">
             <span>⎋</span><span>Log out</span>
         </a>
     </div>
