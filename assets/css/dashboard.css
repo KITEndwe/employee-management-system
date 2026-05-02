@@ -1,7 +1,10 @@
 /* EMS Dashboard Shared Styles */
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap');
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after { 
+    box-sizing: border-box;
+     margin: 0; padding: 0;
+     }
 
 :root {
     --navy: #0f1535;
@@ -127,7 +130,7 @@ html, body {
 }
 
 .nav-label {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 600;
     color: rgba(136,146,184,0.6);
     letter-spacing: 1.2px;
@@ -143,7 +146,7 @@ html, body {
     border-radius: 10px;
     text-decoration: none;
     color: var(--text-muted);
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 400;
     margin-bottom: 2px;
     transition: all 0.2s ease;
@@ -162,7 +165,7 @@ html, body {
 }
 
 .nav-item .nav-icon { 
-    font-size: 20px; width: 30px; 
+    font-size: 13px; width: 30px; 
     text-align: center; 
 }
 
