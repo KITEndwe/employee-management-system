@@ -38,7 +38,7 @@ $initials = substr($initials, 0, 2);
     </nav>
     <div class="sidebar-footer">
         <a href="../logout.php" class="logout-btn">
-            <span>⎋</span><span >Log out</span>
+            <span style="font-size: 2em;" >⎋</span><span >Log out</span>
         </a>
     </div>
 </div>
