@@ -1,0 +1,478 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --navy: #151c3b;
+  --accent: #5b5ef4;
+  --accent-h: #4a4de0;
+  --white: #fff;
+  --bg: #f4f5fb;
+  --border: #e8eaf0;
+  --text: #1e2340;
+  --muted: #8892b4;
+  --gray: #6b7280;
+  --sidebar-w: 228px;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Sora', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ============================================
+   SIDEBAR
+   ============================================ */
+.sidebar {
+  width: var(--sidebar-w);
+  background: var(--navy);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 50;
+}
+
+.sb-brand {
+  padding: 22px 20px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.sb-brand-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(91, 94, 244, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sb-brand-text strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.sb-brand-text span {
+  font-size: 10.5px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.sb-user {
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.sb-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: rgba(91, 94, 244, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.sb-user-name {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #fff;
+  display: block;
+}
+
+.sb-user-role {
+  font-size: 10.5px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.sb-nav {
+  flex: 1;
+  padding: 14px 10px;
+  overflow-y: auto;
+}
+
+.sb-nav-label {
+  font-size: 9.5px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.28);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 10px 10px 6px;
+}
+
+.sb-link {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 12px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.48);
+  text-decoration: none;
+  margin-bottom: 2px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.sb-link:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.sb-link.active {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 500;
+}
+
+.sb-footer {
+  padding: 14px 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.sb-logout {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 12px;
+  border-radius: 9px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.35);
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.sb-logout:hover {
+  background: rgba(239, 68, 68, 0.12);
+  color: #f87171;
+}
+
+/* ============================================
+   MAIN CONTENT
+   ============================================ */
+.main {
+  margin-left: var(--sidebar-w);
+  flex: 1;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.page-head {
+  padding: 32px 36px 0;
+}
+
+.page-head h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 3px;
+}
+
+.page-head p {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.page-body {
+  padding: 0 36px 48px;
+}
+
+/* ============================================
+   FORM CARD
+   ============================================ */
+.form-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  max-width: 760px;
+  overflow: hidden;
+}
+
+.form-card-head {
+  padding: 22px 28px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.form-card-head .head-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  background: rgba(91, 94, 244, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-card-head h2 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.form-card-head p {
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--muted);
+}
+
+.form-body {
+  padding: 28px;
+}
+
+.section-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  margin-bottom: 16px;
+  margin-top: 24px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-label:first-child {
+  margin-top: 0;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray);
+  margin-bottom: 7px;
+}
+
+.field label .req {
+  color: var(--accent);
+  margin-left: 2px;
+}
+
+.field input,
+.field select {
+  padding: 11px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 9px;
+  font-family: 'Sora', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--text);
+  background: var(--white);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  appearance: none;
+}
+
+.field input::placeholder {
+  color: var(--muted);
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(91, 94, 244, 0.1);
+}
+
+.select-wrap {
+  position: relative;
+}
+
+.select-wrap select {
+  width: 100%;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+.select-wrap::after {
+  content: '';
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid var(--muted);
+  pointer-events: none;
+}
+
+.pw-wrap {
+  position: relative;
+}
+
+.pw-wrap input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.pw-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+}
+
+.field-hint {
+  font-size: 11px;
+  font-weight: 300;
+  color: var(--muted);
+  margin-top: 5px;
+}
+
+.form-footer {
+  padding: 20px 28px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 11px 22px;
+  border-radius: 9px;
+  font-family: 'Sora', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: var(--accent-h);
+  box-shadow: 0 5px 18px rgba(91, 94, 244, 0.3);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--gray);
+  border: 1.5px solid var(--border);
+}
+
+.btn-outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ============================================
+   ALERTS
+   ============================================ */
+.alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 13px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.alert-success {
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  color: #065f46;
+}
+
+.alert-error {
+  background: #fff5f5;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+}
+
+/* ============================================
+   SALARY PREVIEW
+   ============================================ */
+.salary-preview {
+  display: none;
+  background: #f0f4ff;
+  border: 1.5px solid #c7d2fe;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-top: 10px;
+}
+
+.salary-preview strong {
+  font-size: 13px;
+  color: #3730a3;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.salary-preview table {
+  width: 100%;
+  font-size: 12px;
+  color: #4338ca;
+}
+
+.salary-preview td:last-child {
+  text-align: right;
+  font-weight: 700;
+}

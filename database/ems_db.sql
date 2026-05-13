@@ -227,3 +227,29 @@ VALUES
     (1, '2026-01-01', 9500.00, 475.00,   0.00,  9975.00),
     (2, '2026-01-01', 7500.00, 375.00,   0.00,  7875.00),
     (3, '2026-01-01', 5500.00, 275.00, 250.00,  5525.00);
+
+
+    -- When you add new employees and salary is not updated and the day not marked as present Run codes
+
+    SELECT employee_id, full_name, basic_salary
+FROM employees
+JOIN users ON employees.user_id = users.user_id
+WHERE users.email = 'theiremail@example.com'; -- Replace with actual email to get employee_id and basic_salary
+
+--Then 
+UPDATE employees
+SET basic_salary = 8000.00 --replace with the new salary if necassary
+WHERE employee_id = X; -- Replace X with the employee_id obtained from the previous query
+
+--if not sure with the ID and salary you can run the below code to update all the employees with a default salary of 8000.00
+SELECT e.employee_id, e.full_name, e.basic_salary, u.email
+FROM employees e
+JOIN users u ON e.user_id = u.user_id;
+
+--Then
+UPDATE attendance a
+JOIN employees e ON a.employee_id = e.employee_id
+SET a.daily_pay = ROUND(e.basic_salary / 22 / 8 * a.total_hours, 2)
+WHERE a.total_hours > 0
+  AND a.daily_pay = 0  --replace with 8 hours if you want to update all the days
+  AND e.employee_id = X; -- Replace X with the employee_id obtained from the first query

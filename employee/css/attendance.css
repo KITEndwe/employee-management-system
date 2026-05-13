@@ -1,0 +1,103 @@
+.clock-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.clock-status-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+  margin: 10px 0 16px;
+}
+
+.clock-status-item {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 10px 14px;
+  text-align: center;
+}
+
+.clock-status-label {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 4px;
+}
+
+.clock-status-value {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.clock-status-value.green {
+  color: #34d399;
+}
+
+.clock-status-value.red {
+  color: #f87171;
+}
+
+.clock-done-box {
+  width: 100%;
+  background: rgba(52, 211, 153, 0.12);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+  border-radius: 10px;
+  padding: 14px 18px;
+  text-align: center;
+}
+
+.done-label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 4px;
+}
+
+.done-pay {
+  font-size: 22px;
+  font-weight: 700;
+  color: #34d399;
+}
+
+.done-hours {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 2px;
+}
+
+.live-badge {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 4px;
+}
+
+.live-badge span {
+  color: #fff;
+  font-weight: 700;
+}
+
+td.pay-cell {
+  font-weight: 600;
+  color: #10b981;
+}
+
+.no-salary-warn {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  color: #92400e;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 13px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
